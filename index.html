@@ -8,12 +8,24 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+  <audio id="background-music" autoplay loop>
+    <source src="song.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+ <!-- Music Controls -->
+<div class="music-controls">
+  <button id="play-btn" onclick="document.getElementById('background-music').play()">🎵 Play</button>
+  <button id="pause-btn" onclick="document.getElementById('background-music').pause()">🔇 Pause</button>
+</div>
+
+  
+
   <!-- Page 1 -->
   <div class="page active" id="page1">
     <h1>Happy Birthday, Sindhu! ❤️</h1>
     <h2>(a wonderful new year too)</h2>
     <img src="cake.jpg" alt="Cake" class="cake-image">
-    <p class="note">cutie, just like you✨</p>
+    <p class="note">sweet, just like you✨</p>
     <div id="confetti-container"></div>  <!-- Confetti container -->
     <button class="nav-btn next">Next</button>
   </div>
@@ -23,7 +35,7 @@
     <h1> Memories</h1>
     <img src="collage.png" alt="Photo Collage" class="collage-image">
     <p> pictures to remind you of good times 🌟</p>
-    <p>here's to more beautiful and unforgettable moments together  </p>
+    <p>here's to many more beautiful and unforgettable moments together 💕💕 </p>
     <button class="nav-btn prev">Previous</button>
     <button class="nav-btn next">Next</button>
   </div>
@@ -36,18 +48,21 @@
          The Persians, living on the other side of the river, called it Hindu, as they had difficulties pronouncing 'S'. 
         The Greeks, who came after the Persians, called it Indus, from which comes India.</p>
 
-    <p> I know, boring history lesson, but this has been one of my many adorations of you. Your name in itself is so beautiful and important, that when I got to know you better(which I still am in the process of)
-        it made our relation all the more special to me. </p>
+    <p> I know, boring history lesson, but this has been one of my many adorations of you. Your name is beautiful and unique, just like you.
+      Knowing you has been one of the best parts of my life. The more I learn about you, the more special you become. 💖 </p>
     </p>
-    <p>So, once again, a very happy birthday to you, and I hope you remain happy as ever.</p>
+    <p>So, once again, a very happy birthday to you, Sindhu. Thank you for being the (short) beautiful, funny, and amazing person you are, and absolutely lighting up my world.</p>
     <div class="gif-container">
-        <img src="arcane.gif" alt="Ekko and Powder dancing together">
-      </div>
+      <img src="birthday.gif" alt="Ekko and Powder dancing together">
+      <img src="dog.gif" alt="huskyF">
+    </div>
     <button class="nav-btn prev">Previous</button>
-  </div>
+
+    </div>
+
 
   <!-- Footer -->
-  <footer class="footer">Made with ❤️ for Sindhuuuu by Sidhu</footer>
+  <footer class="footer">Made with ❤️ for Sindhu by Siddhanth</footer>
 
   <script src="script.js"></script>
 </body>
