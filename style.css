@@ -50,8 +50,10 @@ body {
     color: #fff; /* Readable on gradient */
   }
   .gif-container {
-    width: 300px; /* Adjust width as needed */
-    height: 200px; /* Adjust height as needed */
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+     /* Adjust height as needed */
     margin: 0 auto; /* Center the GIF horizontally */
   }
   .nav-btn {
@@ -64,6 +66,41 @@ body {
     cursor: pointer;
     font-size: 1rem;
   }
+  #page3 .nav-btn{
+    margin-top: 150px;
+  }
+  
+  /* Music Controls Styling */
+.music-controls {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 100; 
+  display: flex;
+  gap: 10px;
+}
+
+.music-controls button {
+  background-color: #ff69b4; /* Light pink */
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.music-controls button:hover {
+  background-color: #ff85c0; /* Slightly brighter pink */
+  transform: scale(1.1);
+}
+
+.music-controls button:active {
+  background-color: #e75480; /* Slightly darker pink */
+}
+
   
   .nav-btn:hover {
     background-color: #3700b3;
