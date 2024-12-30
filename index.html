@@ -12,58 +12,84 @@
     <source src="song.mp3" type="audio/mp3">
     Your browser does not support the audio element.
   </audio>
- <!-- Music Controls -->
-<div class="music-controls">
-  <button id="play-btn" onclick="document.getElementById('background-music').play()">🎵 Play</button>
-  <button id="pause-btn" onclick="document.getElementById('background-music').pause()">🔇 Pause</button>
-</div>
-
-  
+ 
+  <!-- Music Controls -->
+  <div class="music-controls">
+    <button id="play-btn" onclick="document.getElementById('background-music').play()">🎵 Play</button>
+    <button id="pause-btn" onclick="document.getElementById('background-music').pause()">🔇 Pause</button>
+  </div>
 
   <!-- Page 1 -->
   <div class="page active" id="page1">
     <h1>Happy Birthday, Sindhu! ❤️</h1>
-    <h2>(a wonderful new year too)</h2>
+    <h2>(A wonderful new year too)</h2>
     <img src="cake.jpg" alt="Cake" class="cake-image">
-    <p class="note">sweet, just like you✨</p>
-    <div id="confetti-container"></div>  <!-- Confetti container -->
+    <p class="note">Sweet, just like you✨</p>
+    <div id="confetti-container"></div>
     <button class="nav-btn next">Next</button>
   </div>
 
   <!-- Page 2 -->
   <div class="page" id="page2">
-    <h1> Memories</h1>
+    <h1>🫶Memories🫶</h1>
     <img src="collage.png" alt="Photo Collage" class="collage-image">
-    <p> pictures to remind you of good times 🌟</p>
-    <p>here's to many more beautiful and unforgettable moments together 💕💕 </p>
+    <p>Pictures to remind you of good times 🌟</p>
+    <p>Here's to many more beautiful and unforgettable moments together 💕💕</p>
     <button class="nav-btn prev">Previous</button>
     <button class="nav-btn next">Next</button>
   </div>
 
   <!-- Page 3 -->
   <div class="page" id="page3">
-    <h1>Fun Fact</h1>
-    <p>History 101: Sindhu and India</p>
-    <p>Your name is quite an important one. You see, the ancient Indians used to call the river we know as Indus as Sindhu.
-         The Persians, living on the other side of the river, called it Hindu, as they had difficulties pronouncing 'S'. 
-        The Greeks, who came after the Persians, called it Indus, from which comes India.</p>
+    <div class="content-wrapper">
+      <div class="three-column-layout">
+        <div class="side-card fun-fact-card">
+          <div class="pin"></div>
+          <h2 class="section-title">A fun fact about your name🌊🌊</h2>
+          <div class="card-content">
+            <p>Did you know that your name is historically very significant? The ancient Indians  used to call the river we know as Indus as Sindhu . The Persians, living on the other side of the river, called it Hindu, as they had difficulties pronouncing 'S'. The Greeks, who came after the Persians, called it Indus, from which comes India. </p>
+          </div>
+        </div>
 
-    <p> I know, boring history lesson, but this has been one of my many adorations of you. Your name is beautiful and unique, just like you.
-      Knowing you has been one of the best parts of my life. The more I learn about you, the more special you become. As the great musician Jacques Bermon Webster II quite rightly put it, "When I'm with you, I feel alive."💖 </p>
-    </p>
-    <p>So, once again, a very happy birthday to you, Sindhu. Thank you for being the (short) beautiful, funny, and amazing person you are, and absolutely lighting up my world.</p>
-    <div class="gif-container">
-      <img src="birthday.gif" alt="Ekko and Powder dancing together">
-      <img src="dog.gif" alt="huskyF">
+        <div class="center-card about-us-card">
+          <div class="pin"></div>
+          <div class="tape tape-left"></div>
+          <div class="tape tape-right"></div>
+          <h2 class="section-title">A note</h2>
+          <div class="card-content">
+            <p>Sindhu,
+              <br>
+              Getting to know you has been nothing short of magical. Every moment spent with you has made my heart feel fuller, and the more I learn about you, the more you shine in my eyes. You’ve become so incredibly special to me, and I am so grateful to have you in my life. Our first date was one of the happiest days of my life, and I can’t wait to create countless more memories with you.
+On your birthday, I wish you nothing but the purest happiness, and may all your dreams come true. You deserve the world, Sindhu, and I’m just so lucky to be a part of it. Thank you for being the beautiful, funny, and amazing person you are, and for lighting up my world every day.
+To quote the great singer Jacques Bermon Webster II,     
+"When I'm with you, I feel alive."💕💕💕💕</p>
+          </div>
+        </div>
+
+        <div class="side-card tierlist-card">
+          <div class="pin"></div>
+          <h2 class="section-title">A tierlist ranking your likes/dislikes</h2>
+          <h3>(i clearly need to know a lot more about you lol, this was all the top of my head)</h3>
+          <div class="card-content">
+            <a href="my-image.png" target="_blank">
+              <img src="my-image.png" class="tierlist-image" alt="Tierlist">
+              <p>click on the image</p>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="gif-container">
+        <img src="birthday.gif" alt="Birthday celebration gif" class="celebration-gif">
+        <img src="dog.gif" alt="Dog celebration gif" class="celebration-gif">
+      </div>
+
+      <button class="nav-btn prev">Previous</button>
     </div>
-    <button class="nav-btn prev">Previous</button>
-
-    </div>
-
-
+  </div>
+  
   <!-- Footer -->
   <footer class="footer">Made with ❤️ for Sindhu by Siddhanth</footer>
-
   <script src="script.js"></script>
 </body>
 </html>
