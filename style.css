@@ -1,154 +1,216 @@
 /* General Styles */
 body {
-    font-family: 'Classy Vogue', serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(135deg, #ff9a9e, #fad0c4); /* Pink gradient */
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-  
-  .page {
-    display: none;
-    position: relative;
-    width: 100%;
-    flex-grow: 1; /* Ensures that pages grow to take up available space */
-    text-align: center;
-    padding: 20px;
-    box-sizing: border-box;
-    transition: opacity 0.5s ease;
-  }
-  /* Page 1 */
-#page1 {
-    background: linear-gradient(135deg, #f06292, #ff8a80); 
-  }
-  
-  /* Page 2 */
-  #page2 {
-    background: linear-gradient(135deg, #673ab7, #9575cd);
-  }
-  
-  /* Page 3 */
-  #page3 {
-    background: linear-gradient(135deg, #35003b, #6a0068);
-  }
-  .page.active {
-    display: block;
-    opacity: 1;
-  }
+  font-family: 'Classy Vogue', serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
-  h1 {
-    font-size: 3rem;
-    margin: 20px 0;
-    color: #fff; /* Readable on gradient */
+.page {
+  display: none;
+  position: relative;
+  width: 100%;
+  flex-grow: 1;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: opacity 0.5s ease;
+}
+
+.page.active {
+  display: block;
+  opacity: 1;
+}
+
+/* Gradient Backgrounds */
+#page1 {
+  background: linear-gradient(135deg, #f06292, #ff8a80);
+}
+
+#page2 {
+  background: linear-gradient(135deg, #673ab7, #9575cd);
+}
+
+#page3 {
+  background: linear-gradient(135deg, #ff9a9e, #f06292, #ff8a80, #6a00ff); 
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s ease infinite;
+  padding: 2rem;
+  position: relative;
+}
+
+/* Starry Background */
+#page3::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://wallpaperaccess.com/full/149357.jpg') repeat;
+  z-index: -1;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
   }
-  
-  p {
-    font-size: 1.2rem;
-    color: #fff; /* Readable on gradient */
+  50% {
+    background-position: 100% 50%;
   }
-  .gif-container {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-     /* Adjust height as needed */
-    margin: 0 auto; /* Center the GIF horizontally */
+  100% {
+    background-position: 0% 50%;
   }
-  .nav-btn {
-    margin: 20px;
-    padding: 10px 20px;
-    background-color: #6200ea;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-  }
-  #page3 .nav-btn{
-    margin-top: 150px;
-  }
-  
-  /* Music Controls Styling */
+}
+
+/* Page 3 Layout */
+.three-column-layout {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr 1.1fr;
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Card Styles */
+.side-card {
+  background: #ffd075;
+  color: #333;
+  padding: 2rem;
+  border-radius: 2px;
+  position: relative;
+  transform: rotate(-2deg);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.about-us-card {
+  background: #ff9ecd;
+  color: #333;
+  padding: 2.5rem;
+  position: relative;
+  transform: rotate(0deg);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+.tierlist-card {
+  transform: rotate(2deg);
+  background: #98ff98;
+  padding: 1.5rem;
+}
+
+/* Card Content */
+.card-content {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Tierlist Image Styles */
+.tierlist-image {
+  width: 100%;
+  max-width: 800px;
+  height: 250px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  display: block;
+  margin: 0.5rem auto;
+}
+
+.tierlist-image:hover {
+  transform: scale(1.02);
+}
+
+/* Hover Effects */
+.side-card:hover, .about-us-card:hover {
+  transform: scale(1.02) rotate(0deg);
+  transition: all 0.3s ease;
+}
+
+/* Navigation Buttons */
+.nav-btn {
+  margin: 20px;
+  padding: 10px 20px;
+  background-color: #6200ea;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover,
+.nav-btn:focus {
+  background-color: #3700b3;
+  transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 20px;
+  background-color: #6200ea;
+  margin-top: auto;
+  color: #fff;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Music Controls */
 .music-controls {
   position: fixed;
   top: 10px;
   right: 10px;
-  z-index: 100; 
+  z-index: 100;
   display: flex;
   gap: 10px;
 }
 
 .music-controls button {
-  background-color: #ff69b4; /* Light pink */
+  background-color: #ff69b4;
   color: white;
   border: none;
   border-radius: 10px;
   padding: 8px 12px;
   font-size: 16px;
   cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
 
 .music-controls button:hover {
-  background-color: #ff85c0; /* Slightly brighter pink */
+  background-color: #ff85c0;
   transform: scale(1.1);
 }
 
 .music-controls button:active {
-  background-color: #e75480; /* Slightly darker pink */
+  background-color: #e75480;
+}
+/* Confetti Styling */
+/* Confetti Styling */
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #ffeb3b;
+  border-radius: 50%;
+  animation: confetti-fall 3s linear infinite;
 }
 
-  
-  .nav-btn:hover {
-    background-color: #3700b3;
+@keyframes confetti-fall {
+  0% {
+    top: -10px; /* Start just above the screen */
+    opacity: 1;
   }
-  
-  .cake-image,
-  .collage-image {
-    width: 700px;
-    height: auto;
-    margin: 20px 0;
+  100% {
+    top: 100vh; /* Move to the bottom of the screen */
+    opacity: 0;
   }
-  
-  /* Footer Styles */
-  .footer {
-    text-align: center;
-    font-size: 1.2rem;
-    padding: 20px;
-    background-color: #6200ea;
-    margin-top: auto; /* Pushes footer to the bottom */
-  }
-  
-  /* Confetti Styles */
-  #confetti-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    pointer-events: none;
-    z-index: 2; /* Ensure it is above other content */
-  }
-  
-  .confetti {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background-color: #ffeb3b;
-    animation: confetti-fall 3s linear infinite;
-  }
-  
-  @keyframes confetti-fall {
-    0% {
-      transform: translateY(-10vh) rotate(0deg);
-      opacity: 1;
-    }
-    100% {
-      transform: translateY(100vh) rotate(720deg);
-      opacity: 0;
-    }
-  }
-  
+}
+/* Prevent layout shifts due to confetti by always showing a scrollbar */
+
