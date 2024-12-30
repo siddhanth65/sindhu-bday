@@ -25,9 +25,9 @@ function createConfetti() {
   const confetti = document.createElement('div');
   confetti.classList.add('confetti');
 
-  // Randomize position
-  confetti.style.left = `${Math.random() * 100}%`;
-  confetti.style.animationDuration = `${Math.random() * 2 + 3}s`;  // Vary duration
+  // Randomize horizontal position (left) across the entire width of the screen
+  const leftPosition = Math.random() * 100; // Random left position from 0% to 100%
+  confetti.style.left = `${leftPosition}%`;
 
   confettiContainer.appendChild(confetti);
 
@@ -37,3 +37,4 @@ function createConfetti() {
 
 // Generate confetti every 100ms
 setInterval(createConfetti, 100);
+
